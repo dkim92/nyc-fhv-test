@@ -57,7 +57,6 @@ def lambda_handler(event, context):
     response = requests.get(url, params=params)
     data = response.json()
     
-    # Convert to DataFrame and then to Parquet
     df = pd.DataFrame(data)
     # Check if the DataFrame is empty 
     if df.empty:
